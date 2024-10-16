@@ -29,17 +29,25 @@
   <button onclick="
   resetScore();
   console.log('score are reset');
+  localStorage.removeItem('score');
   ">
     Reset score
   </button>
 
   <script>
-    const score ={
-      wins: 0,
-      losses: 0,
-      ties: 0
-    };
-
+      let score = JSON.parse(localStorage.getItem('score')) || {
+        wins:0,
+        losses:0,
+        ties:0
+      }
+      
+      // if (!score) {
+      // score={
+      //   wins:0,
+      //   losses:0,
+      //   ties:0
+      // };
+      // }
 
     function playGame(playerMove) {
       const computerMoves = pickCOmputerMove();
@@ -78,6 +86,8 @@
       }else if(result === 'tie'){
         score.ties+= 1;
       }
+//to save the score in local storage i.e score wont delete after we refresh the page
+      localStorage.setItem('score', JSON.stringify(score) );
 
       alert(
         `you picked ${playerMove}.computer picked ${computerMoves}.${result}.

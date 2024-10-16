@@ -1,31 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Objects</title>
-</head>
-<body>
-    <h1>Objects</h1>
-    <script>
-        const member = {
-            name: "John",
-            age: 22
-        };
-        console.log(member);
-        console.log(member.age);
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Objects</title>
+        </head>
+        <body>
+            <h1>Objects</h1>
+            <script>
+                // const member = {
+                //     name: "John",
+                //     age: 22,
+                //     salary: 696969,
+                //     fun: function fun1(){
+                //         console.log('function inside the object')
+                //     }
+                // };
+                // console.log(member);
+                // console.log(member.age);
 
-        member.name = 'jane';
-        console.log(member);
+                // member.name = 'jane';
+                // console.log(member);
 
-        member.income = 12000;
-        console.log(member);
+                // member.income = 12000;
+                // console.log(member);
 
-        delete member.income;
-        console.log(member);
+                // delete member.income;
+                // console.log(member);
 
-        console.log(member['age'])
+                // console.log(member['age'])
+                // member.fun();
 
-    </script>
-</body>
-</html>
+                // //to convert javascript-object into json-string
+                // console.log(JSON.stringify(member));
+
+                // //to convert json-string into javascript-object
+                // const jsonstring = JSON.stringify(member);
+                // console.log(JSON.parse(jsonstring));
+
+                
+                console.log('snippet'.length);
+                console.log('snippet'.toUpperCase());
+
+    //object reference and we cant compare the objects even they have same value, it also create reference of the object
+                const obj1 = {
+                    message: 'snippet'
+                };
+                const obj2 = obj1;
+                obj1.message = 'play bold';
+                console.log(obj1);
+                console.log(obj2);
+                
+                console.log(obj1 === obj2);//true cause it have same references
+                
+                const obj3 ={
+                    message: 'play bold'
+                }
+                console.log(obj1 === obj3);//false cause it have different references
+
+                //destructuring || shortcuts for objects
+                const obj4 ={
+                    message: 'play bold',
+                    reply: 'dont play'
+                }
+                // const message = obj4.message;
+                //if we have same variable and  same property name then we can use destructuring
+                const {message,reply} = obj4;
+                console.log(message);
+                console.log(reply);
+
+                //shorthand property
+                const obj5 ={
+                // message: message
+                message,
+                // method: function fun1(){
+                //     console.log('it is a method');
+                // }
+                method(){
+                    console.log('it is shorthand method ')
+                }
+                };
+                console.log(obj5);
+                obj5.method();
+
+
+            </script>
+        </body>
+        </html>
