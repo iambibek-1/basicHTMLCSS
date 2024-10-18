@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARRAYS AND LOOPS</title>
+  </head>
+  <body>
+    <script>
+      /*
+            const numArray = [68, 67, 69, 70];
+            console.log(numArray[0]);
+
+            //to add value at the end of the array
+            numArray.push('take it easy')
+            console.log(numArray);
+
+            //it takes 2  parameters, the first is the index and the second is the value to be removed
+            numArray.splice(0,2);
+            console.log(numArray);
+      */
+
+      //LOOPS
+      //1.while loop
+      /*     let i = 1;
+            while (i <= 10) {
+              console.log(i);
+              i++;
+            }
+
+            //2.for loop
+            for (let i = 1; i <= 7; i++) {
+              console.log(i);
+            }
+      */
+
+      const todolist = ["do it", "take it easy", "eat", "sleep"];
+      for (let i = 0; i < todolist.length; i++) {
+        console.log(todolist[i]);
+      }
+
+      const numbers = [2,4,6];
+      let doubledNum=[];
+      for(let i=0;i<numbers.length;i++){
+        const  num = numbers[i];
+        doubledNum.push(num*2);
+      }
+      console.log(doubledNum);
+    </script>
+  </body>
+</html>

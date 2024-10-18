@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM PROJECT</title>
+  </head>
+  <body>
+    <h1>Subscribe button</h1>
+    <button
+      class="sub-btn"
+      onclick="subscribe();"
+    >
+      Subscribe
+    </button>
+
+    <script>
+      function subscribe() {
+        let subbutton = document.querySelector(".sub-btn");
+        if (subbutton.innerHTML === "Subscribe") {
+          subbutton.innerHTML = "Subscribed";
+        } else {
+          subbutton.innerHTML = "Subscribe";
+        }
+      }
+    </script>
+  </body>
+</html>
