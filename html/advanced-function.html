@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Function</title>
-</head>
-<body>
-    <script>
-       /* setTimeout(function(){
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Advanced Function</title>
+    </head>
+    <body>
+        <script>
+        /* setTimeout(function(){
             console.log("print after 5000 milisecond!!");
         },5000 );
 
@@ -20,6 +20,19 @@
             console.log('its an arrow function');
         }
         arrowfunction();
-    </script>
-</body>
-</html>
+    //map function
+        const numbers =[2,3,4,5];
+        const oneAdd = numbers.map(numbers =>numbers+1);
+        console.log(oneAdd);
+
+    //reduce function
+    const numbers2 = [1, 1, 1, 1];
+    const div = numbers2.reduce((accumulator, currentValue) => accumulator * 3, 1);
+    console.log(div);
+//filter function
+const num3=[20,11,12,15,22,29];
+const span = num3.filter(num3=>num3%2);
+console.log(span);
+        </script>
+    </body>
+    </html>
